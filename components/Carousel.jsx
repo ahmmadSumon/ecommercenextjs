@@ -49,7 +49,7 @@ export function CarouselPlugin() {
       <CarouselContent>
         {slides.map((slide, index) => (
           <CarouselItem key={index}>
-            <div className="relative h-[88vh]">
+            <div className="relative h-[80vh]">
               {/* Background Image */}
               <img
                 src={slide.image}

@@ -4,7 +4,7 @@ import { CarouselPlugin } from './Carousel'
 
 const Herosection = () => {
   return (
-    <div className='w-full min-h-[88vh]'>
+    <div className='w-full min-h-[80vh]'>
     <CarouselPlugin/>
     </div>
   )
