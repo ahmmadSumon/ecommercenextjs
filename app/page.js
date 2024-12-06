@@ -14,7 +14,9 @@ export default function Home() {
      <Category/>
      <Two/>
      <WobbleCardDemo/>
+     
      <ProductGallery/>
+     <WobbleCardDemo/>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import ProductGallery from "@/app/allproducts/page";
 import { allProducts } from "../../../data"; // Ensure this path is correct
 import Image from "next/image";
 import Link from "next/link";
@@ -21,11 +22,11 @@ export default async function ProductDetailPage({ params }) {
   }
 
   return (
-    <div className="max-w-7xl mx-auto my-10 p-6 bg-white rounded-lg shadow-lg mt-20">
+    <div className="max-w-7xl mx-auto my-10 p-6 bg-white rounded-lg shadow-lg mt-14 md:mt-20">
      
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Product Image */}
-        <div className="relative w-full lg:w-1/2 h-[700px]">
+        <div className="relative w-full lg:w-1/2 h-[400px] md:h-[700px]">
           <Image
             src={product.imageUrl}
             alt={product.name}
@@ -35,7 +36,7 @@ export default async function ProductDetailPage({ params }) {
           />
         </div>
         {/* Product Details */}
-        <div className="lg:w-1/2 pt-40 px-5 bg-[#EBF5FB]">
+        <div className="lg:w-1/2  pt-7 md:pt-40 px-5 bg-[#EBF5FB]">
         <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
           <p className="text-gray-700 mb-4">{product.description}</p>
           <p className="text-lg font-bold text-gray-900 mb-4">
@@ -57,7 +58,7 @@ export default async function ProductDetailPage({ params }) {
           )}
 
           {/* Action Buttons */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 pb-5">
             <button
               className="px-4 py-2 bg-black flex justify-center items-center gap-3 text-white rounded-lg hover:bg-blue-700 transition"
               disabled={!product.sizes?.length} // Disable if no sizes are available
@@ -88,6 +89,10 @@ export default async function ProductDetailPage({ params }) {
           </div>
         </div>
       </div>
+      <div>
+        <ProductGallery/>
+      </div>
     </div>
   );
+
 }
