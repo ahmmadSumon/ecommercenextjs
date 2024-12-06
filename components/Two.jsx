@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Two = () => {
   const items = [
@@ -21,6 +22,7 @@ const Two = () => {
     <div className="py-8 px-4 bg-gray-50 ">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-7xl mx-auto">
         {items.map((item) => (
+          <Link href="/mens">
           <div
             key={item.id}
             className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
@@ -39,6 +41,7 @@ const Two = () => {
               <p className="text-2xl text-black mt-1">{item.description}</p>
             </div>
           </div>
+          </Link>
         ))}
       </div>
       <div className="max-w-7xl mx-auto my-10 relative">
