@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { FiSearch, FiShoppingCart, FiHeart, FiUser, FiMenu } from "react-icons/fi";
 import Link from "next/link";
@@ -25,17 +25,37 @@ import {
 const Nav = () => {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   if (!mounted) {
     return null; // Prevents the component from rendering during SSR
   }
 
   return (
-    <nav className="bg-white shadow-md px-6 py-4">
+    <nav
+      className={`bg-white shadow-md px-6 py-4 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between">
         {/* Left Section */}
         <NavigationMenu>
@@ -60,21 +80,21 @@ const Nav = () => {
                 <ul className="space-y-2">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/shop/mens" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/mens" className="text-gray-800 hover:text-gray-600">
                         Men&apos;s Fashion
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/shop/womens" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/womens" className="text-gray-800 hover:text-gray-600">
                         Women&apos;s Fashion
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/shop/kids" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/kids" className="text-gray-800 hover:text-gray-600">
                         Kids&apos; Fashion
                       </Link>
                     </NavigationMenuLink>
@@ -143,15 +163,21 @@ const Nav = () => {
 
         {/* Mobile Menu: Side Open Menu with Sheet Component */}
         <div className="md:hidden flex items-center">
+            <div className="mx-2">
+              <FiShoppingCart size={30} className="cursor-pointer" />
+             </div>
+              <div className="mx-2">
+              <FiHeart size={30} className="cursor-pointer" />
+             </div>
           <Sheet open={open} onOpenChange={setOpen}>
+          
             <SheetTrigger>
-              {/* Instead of button inside SheetTrigger, you can directly use an icon or another element */}
-              <FiMenu size={30} className="cursor-pointer" onClick={() => setOpen(!open)} />
+              <FiMenu size={30} className="cursor-pointer bg-white " />
             </SheetTrigger>
-
-            <SheetContent side="left" className="w-64 bg-white p-6 shadow-lg space-y-4">
+             
+            <SheetContent side="left" className="w-64 bg-black  p-6 shadow-lg space-y-4">
               <SheetHeader>
-                <SheetTitle className="text-2xl font-bold text-gray-800">
+                <SheetTitle className="text-2xl font-bold text-white">
                   betichrom fashion
                 </SheetTitle>
                 <SheetDescription className="text-gray-600">
@@ -161,50 +187,46 @@ const Nav = () => {
 
               {/* Menu Links */}
               <div className="space-y-4">
-                <Link href="/" className="block text-gray-800 hover:text-gray-600">
+                <Link href="/" className="block text-white hover:text-gray-600">
                   HOME
                 </Link>
-                <Link href="/winter" className="block text-gray-800 hover:text-gray-600">
+                <Link href="/winter" className="block text-white hover:text-gray-600">
                   WINTER 24/25
                 </Link>
                 <div>
-                  <Button variant="ghost" className="w-full text-left">
+                  <Button variant="ghost" className="w-full text-white text-left">
                     Shop
                   </Button>
                   <div className="space-y-2 pl-4">
-                    <Link href="/shop/mens" className="block text-gray-800 hover:text-gray-600">
+                    <Link href="/mens" className="block text-white hover:text-gray-600">
                       Men&apos;s Fashion
                     </Link>
-                    <Link href="/shop/womens" className="block text-gray-800 hover:text-gray-600">
+                    <Link href="/womens" className="block text-white hover:text-gray-600">
                       Women&apos;s Fashion
                     </Link>
-                    <Link href="/shop/kids" className="block text-gray-800 hover:text-gray-600">
+                    <Link href="/kids" className="block text-white hover:text-gray-600">
                       Kids&apos; Fashion
                     </Link>
                   </div>
                 </div>
                 <div>
-                  <Button variant="ghost" className="w-full text-left">
+                  <Button variant="ghost" className="w-full text-white text-left">
                     How to Order
                   </Button>
                   <div className="space-y-2 pl-4">
-                    <Link href="/order/process" className="block text-gray-800 hover:text-gray-600">
+                    <Link href="/order/process" className="block text-white hover:text-gray-600">
                       Ordering Process
                     </Link>
-                    <Link href="/order/shipping" className="block text-gray-800 hover:text-gray-600">
+                    <Link href="/order/shipping" className="block text-white hover:text-gray-600">
                       Shipping Info
                     </Link>
-                    <Link href="/order/returns" className="block text-gray-800 hover:text-gray-600">
+                    <Link href="/order/returns" className="block text-white hover:text-gray-600">
                       Returns & Refunds
                     </Link>
                   </div>
                 </div>
               </div>
-              <SheetClose>
-                <Button variant="ghost" className="w-full text-left mt-6">
-                  Close Menu
-                </Button>
-              </SheetClose>
+             
             </SheetContent>
           </Sheet>
         </div>

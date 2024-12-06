@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 
 const slides = [
   {
@@ -62,6 +63,8 @@ export function CarouselPlugin() {
   <h2 className="text-4xl  md:text-6xl font-extrabold tracking-wide text-center mb-6 drop-shadow-lg">
     {slide.title}
   </h2>
+  <Link href="/allproducts">
+  
   <button className="flex items-center gap-2 px-8 py-3 bg-black text-white rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 hover:scale-105 transition-all duration-300">
     {slide.buttonText}
     <svg
@@ -79,6 +82,7 @@ export function CarouselPlugin() {
       />
     </svg>
   </button>
+  </Link>
 </div>
             </div>
           </CarouselItem>

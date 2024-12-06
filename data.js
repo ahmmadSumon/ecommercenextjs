@@ -1,10 +1,10 @@
 const menClothingItems = [
     {
-      id: 1,
+      id:'1',
       name: "Classic White T-Shirt",
       description: "A timeless white t-shirt made from organic cotton.",
       price: 25.00,
-      imageUrl:"/products/t-shirt2.jpg",
+      imageUrl:"/products/tshirt2.jpg",
       sizes: ["S", "M", "L", "XL"],
       category: "Men"
     },
@@ -13,7 +13,7 @@ const menClothingItems = [
       name: "Denim Jacket",
       description: "A stylish denim jacket with a modern fit.",
       price: 60.00,
-      imageUrl:'/products/denimjacket.jpg',
+      imageUrl:'/products/denim jacket.jpg',
       sizes: ["S", "M", "L", "XL"],
       category: "Men"
     },
@@ -22,7 +22,7 @@ const menClothingItems = [
       name: "Black Skinny Jeans",
       description: "Comfortable and versatile black skinny jeans.",
       price: 40.00,
-      imageUrl: '/products/blackjeans.jpg',
+      imageUrl: '/products/skinnyjeans.jpg',
       sizes: ["28", "30", "32", "34", "36"],
       category: "Men"
     },
@@ -58,7 +58,7 @@ const menClothingItems = [
       name: "Graphic T-Shirt",
       description: "A t-shirt with a cool graphic design.",
       price: 30.00,
-      imageUrl: '/products/tshirt.jpg',
+      imageUrl: '/products/whittshirt.jpg',
       sizes: ["S", "M", "L", "XL"],
       category: "Men"
     },
@@ -67,7 +67,7 @@ const menClothingItems = [
       name: "Puffer Jacket",
       description: "A warm puffer jacket for cold weather.",
       price: 100.00,
-      imageUrl: '/products/puffer.jpg',
+      imageUrl: '/products/puff.jpg',
       sizes: ["S", "M", "L", "XL"],
       category: "Men"
     },
@@ -96,7 +96,7 @@ const menClothingItems = [
       name: "Floral Summer Dress",
       description: "A light and breezy dress perfect for summer days.",
       price: 45.00,
-      imageUrl: '/products/summer.jpg',
+      imageUrl: '/products/su.jpg',
       sizes: ["S", "M", "L"],
       category: "Women"
     },
@@ -105,7 +105,7 @@ const menClothingItems = [
       name: "Woolen Scarf",
       description: "A cozy woolen scarf to keep you warm in winter.",
       price: 20.00,
-      imageUrl: '/products/scarf.jpg',
+      imageUrl: '/products/woolenscarf.jpg',
       sizes: ["One Size"],
       category: "Women"
     },
@@ -114,7 +114,7 @@ const menClothingItems = [
       name: "Leather Handbag",
       description: "A stylish leather handbag for daily use.",
       price: 70.00,
-      imageUrl: '/products/handbag.jpg',
+      imageUrl: '/products/highheels.jpg',
       sizes: ["One Size"],
       category: "Women"
     },
@@ -123,7 +123,7 @@ const menClothingItems = [
       name: "High Heels",
       description: "Elegant high heels for special occasions.",
       price: 90.00,
-      imageUrl: '/products/heels.jpg',
+      imageUrl: '/products/highheels.jpg',
       sizes: ["6", "7", "8", "9"],
       category: "Women"
     },
@@ -141,7 +141,7 @@ const menClothingItems = [
       name: "Silk Blouse",
       description: "A luxurious silk blouse for a sophisticated look.",
       price: 55.00,
-      imageUrl: '/products/slik.jpg',
+      imageUrl: '/products/silkblouse.jpg',
       sizes: ["S", "M", "L"],
       category: "Women"
     },
@@ -150,7 +150,7 @@ const menClothingItems = [
       name: "Denim Skirt",
       description: "A classic denim skirt for casual outings.",
       price: 40.00,
-      imageUrl: '/products/skirt.jpg',
+      imageUrl: '/products/denimskirt.jpg',
       sizes: ["S", "M", "L"],
       category: "Women"
     },
@@ -168,7 +168,7 @@ const menClothingItems = [
       name: "Running Shoes",
       description: "Lightweight and comfortable running shoes.",
       price: 80.00,
-      imageUrl:'/products/running.jpg',
+      imageUrl:'/products/runningshoe.jpg',
       sizes: ["6", "7", "8", "9"],
       category: "Women"
     },
@@ -197,7 +197,7 @@ const menClothingItems = [
       name: "Kids' Jeans",
       description: "Comfortable and durable jeans for kids.",
       price: 25.00,
-      imageUrl:'/products/kidsjeans.jpg',
+      imageUrl:'/products/kidsjean.jpg',
       sizes: ["XS", "S", "M", "L"],
       category: "Kids"
     },
@@ -206,7 +206,7 @@ const menClothingItems = [
       name: "Kids' Sneakers",
       description: "Stylish sneakers for everyday wear.",
       price: 30.00,
-      imageUrl:kidssnekars,
+      imageUrl:'/products/kidssneaker.jpg',
       sizes: ["XS", "S", "M", "L"],
       category: "Kids"
     },
@@ -224,7 +224,7 @@ const menClothingItems = [
       name: "Kids' Shorts",
       description: "Comfortable shorts for kids to play in.",
       price: 15.00,
-      imageUrl: '/products/kidsshorts.jpg',
+      imageUrl: '/products/kidsshort.jpg',
       sizes: ["XS", "S", "M", "L"],
       category: "Kids"
     },
@@ -242,7 +242,7 @@ const menClothingItems = [
       name: "Kids' Pajamas",
       description: "Soft and comfortable pajamas for kids.",
       price: 20.00,
-      imageUrl:'/products/kidspajamas.jpg',
+      imageUrl:'/products/kidspajams.jpg',
       sizes: ["XS", "S", "M", "L"],
       category: "Kids"
     },
