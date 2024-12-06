@@ -45,6 +45,7 @@ const Two = () => {
         ))}
       </div>
       <div className="max-w-7xl mx-auto my-10 relative">
+        <Link href="/mens">
         <Image
         src="/images/jeans.jpg"
         alt="jeans"
@@ -54,7 +55,9 @@ const Two = () => {
         />
         <h2 className="absolute inset-0 w-36 top-[0%] left-[40%] flex items-center justify-center text-6xl font-extrabold text-black">Jeans</h2>
         <p className="absolute inset-0 w-96 top-[15%] left-[40%] flex items-center justify-center text-xl font-bold text-black">Starting Price: 1500 TK</p>
+        </Link>
       </div>
+      
     </div>
   );
 };

@@ -12,8 +12,9 @@ export default function Home() {
    
      <Herosection/>
      <Category/>
-     <Two/>
      <WobbleCardDemo/>
+     <Two/>
+   
      
      <ProductGallery/>
      <WobbleCardDemo/>
