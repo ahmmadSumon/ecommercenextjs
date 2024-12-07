@@ -20,7 +20,7 @@ const Mens= ()=> {
 
   return (
     <div className="max-w-7xl mx-auto mt-20">
-      <h1 className="text-center text-3xl font-bold">Mens Collection</h1>
+      <h1 className="text-center text-3xl text-white font-bold">Mens Collection</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-6">
         {menClothingItems.map((product) => (
           <LensDemo key={product.id} product={product} />

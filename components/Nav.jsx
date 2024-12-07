@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { FiSearch, FiShoppingCart, FiHeart, FiUser, FiMenu } from "react-icons/fi";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import useCartStore from '../store/useStore'; // Path to your Zustand store
 import {
   Sheet,
   SheetTrigger,
@@ -27,6 +28,11 @@ const Nav = () => {
   const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  
+  const items = useCartStore((state) => state.items);
+  const wishlist = useCartStore((state) => state.wishlist); // Access wishlist
+  const addToWishlist = useCartStore((state) => state.addToWishlist);
+  const removeFromWishlist = useCartStore((state) => state.removeFromWishlist);
 
   useEffect(() => {
     setMounted(true);
@@ -52,7 +58,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`bg-white shadow-md px-6 py-4 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-white shadow-md px-6 py-5 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -146,36 +152,69 @@ const Nav = () => {
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="ghost">
-            <FiSearch size={20} />
-          </Button>
-          <Button variant="ghost">
-            <FiShoppingCart size={20} />
-          </Button>
-          <Button variant="ghost">
-            <FiHeart size={20} />
-          </Button>
-          <Button variant="ghost">
-            <FiUser size={20} />
-          </Button>
-          <Button variant="default">SHOP</Button>
+          <div variant="ghost">
+            <FiSearch className="cursor-pointer" size={24} />
+          </div>
+          <div variant="ghost">
+            <div className="relative">
+            <Link href="/cart">
+              <FiShoppingCart size={24} className="cursor-pointer" />
+              <span className="w-5 h-5 bg-black text-white rounded-full absolute left-3 -top-5 text-xs flex items-center justify-center font-semibold ring-2 ring-white ring-offset-2 transform scale-110 hover:scale-125 transition-all duration-300 ease-in-out">
+                {items.length}
+              </span>
+              </Link>
+            </div>
+          </div>
+          <div variant="ghost">
+  <div className="relative">
+    <Link href="/wishlist">
+    <FiHeart size={24} className="cursor-pointer" />
+    <span className="w-5 h-5 bg-black text-white rounded-full absolute left-3 -top-5 text-xs flex items-center justify-center font-semibold ring-2 ring-white ring-offset-2 transform scale-110 hover:scale-125 transition-all duration-300 ease-in-out">
+      {wishlist.length}
+    </span>
+    </Link>
+  </div>
+</div>
+
+          <div variant="ghost">
+            <FiUser className="cursor-pointer" size={24} />
+          </div>
+          <Link href="/allproducts">
+          <button className="relative rounded px-6 py-3 bg-black text-white text-sm font-medium tracking-wide overflow-hidden group">
+            <span className="relative z-10 block transition-transform duration-300 group-hover:-translate-y-8">
+              Shop Now
+            </span>
+            <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              Shop Now
+            </span>
+          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu: Side Open Menu with Sheet Component */}
         <div className="md:hidden flex items-center">
-            <div className="mx-2">
-              <FiShoppingCart size={30} className="cursor-pointer" />
-             </div>
-              <div className="mx-2">
-              <FiHeart size={30} className="cursor-pointer" />
-             </div>
+          <div className="relative mx-2">
+          <Link href="/cart">
+            <FiShoppingCart size={24} className="cursor-pointer" />
+            <span className="w-5 h-5 bg-black text-white rounded-full absolute left-3 -top-5 text-xs flex items-center justify-center font-semibold ring-2 ring-white ring-offset-2 transform scale-110 hover:scale-125 transition-all duration-300 ease-in-out">
+              {items.length}
+            </span>
+            </Link>
+          </div>
+          <div className=" relative mx-2">
+          <Link href="/wishlist">
+            <FiHeart size={24} className="cursor-pointer" />
+            <span className="w-5 h-5 bg-black text-white rounded-full absolute left-3 -top-5 text-xs flex items-center justify-center font-semibold ring-2 ring-white ring-offset-2 transform scale-110 hover:scale-125 transition-all duration-300 ease-in-out">
+              {wishlist.length}
+            </span>
+            </Link>
+          </div>
           <Sheet open={open} onOpenChange={setOpen}>
-          
             <SheetTrigger>
-              <FiMenu size={30} className="cursor-pointer bg-white " />
+              <FiMenu size={30} className="cursor-pointer bg-white mx-2 " />
             </SheetTrigger>
-             
-            <SheetContent side="left" className="w-64 bg-black  p-6 shadow-lg space-y-4">
+
+            <SheetContent side="left" className="w-64 bg-black p-6 shadow-lg space-y-4">
               <SheetHeader>
                 <SheetTitle className="text-2xl font-bold text-white">
                   betichrom fashion
@@ -226,7 +265,6 @@ const Nav = () => {
                   </div>
                 </div>
               </div>
-             
             </SheetContent>
           </Sheet>
         </div>

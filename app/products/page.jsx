@@ -10,7 +10,7 @@ import Link from "next/link";
 export function ProductGallery() {
   return (
     <div className="max-w-7xl mx-auto my-10">
-        <h1 className="text-center text-3xl font-bold ">Latest Arrival</h1>
+        <h1 className="text-center text-white text-3xl font-bold ">Latest Arrival</h1>
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-6 ">
       {allProducts.map((product) => (
         <LensDemo key={product.id} product={product} />
