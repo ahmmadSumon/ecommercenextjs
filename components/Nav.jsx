@@ -22,6 +22,7 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
+import SearchComponent from "./Search";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -58,7 +59,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`bg-white shadow-md px-6 py-5 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-white shadow-md px-6 py-6 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -118,21 +119,21 @@ const Nav = () => {
                 <ul className="space-y-2">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/order/process" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/order" className="text-gray-800 hover:text-gray-600">
                         Ordering Process
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/order/shipping" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/order" className="text-gray-800 hover:text-gray-600">
                         Shipping Info
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/order/returns" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/order" className="text-gray-800 hover:text-gray-600">
                         Returns & Refunds
                       </Link>
                     </NavigationMenuLink>
@@ -152,8 +153,8 @@ const Nav = () => {
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-4">
-          <div variant="ghost">
-            <FiSearch className="cursor-pointer" size={24} />
+          <div className="relative" variant="ghost">
+            <SearchComponent/>
           </div>
           <div variant="ghost">
             <div className="relative">

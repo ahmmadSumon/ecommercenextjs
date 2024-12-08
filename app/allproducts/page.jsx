@@ -9,9 +9,9 @@ import Link from "next/link";
 
 const ProductGallery = ()=> {
   return (
-    <div className="max-w-7xl mx-auto my-10 mt-20">
+    <div className="max-w-7xl mx-auto my-10 mt-28">
         <h1 className="text-center text-white  text-3xl font-bold ">Latest Arrival</h1>
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-6 ">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-2 ">
       {allProducts.map((product) => (
         <LensDemo key={product.id} product={product} />
       ))}
@@ -25,7 +25,7 @@ function LensDemo({ product }) {
 
   return (
     <Link href={`/products/${product.id}`} passHref>
-      <div className="cursor-pointer w-full relative rounded-3xl overflow-hidden max-w-xs mx-auto bg-gradient-to-r from-[#1D2235] to-[#121318] p-4 my-6">
+      <div className="cursor-pointer w-full relative rounded-3xl overflow-hidden max-w-xs mx-auto bg-gradient-to-r from-[#1D2235] to-[#121318] p-2 my-6">
         <Rays />
         <Beams />
         <div className="relative z-10">

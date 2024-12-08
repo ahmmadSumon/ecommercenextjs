@@ -56,7 +56,7 @@ const Two = () => {
         className="w-full h-[400px] md:h-[500px] object-left md:object-cover hover:scale-105 transition-transform duration-300  rounded-xl  overflow-hidden"
         />
         <h2 className="absolute inset-0 w-36 top-[0%] left-[20%]  md:left-[40%] flex items-center justify-center text-6xl font-extrabold text-black">Jeans</h2>
-        <p className="absolute inset-0 w-96 top-[30%] left-[10%]  md:left-[40%] flex items-center justify-center text-xl font-bold text-black">Starting Price: 1500 TK</p>
+        <p className="absolute inset-0 w-96 top-[30%] left-[5%]  md:left-[40%] flex items-center justify-center text-xl font-bold text-black">Starting Price: 1500 TK</p>
         </Link>
       </div>
       

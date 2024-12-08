@@ -8,9 +8,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* About Section */}
             <div>
-              <h2 className="text-xl font-semibold mb-4">Company</h2>
+              <h2 className="text-xl font-semibold mb-4">Betichrome Fashion</h2>
               <p className="text-gray-400 text-sm">
-                Building modern and intuitive solutions to empower your business and elevate user experience.
+                A one-stop shop for all your e-commerce clothing needs.
               </p>
             </div>
   
@@ -18,10 +18,10 @@ const Footer = () => {
             <div>
               <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
               <ul className="space-y-2 text-sm">
-                <li><a href="/" className="text-gray-400 hover:text-white">Home</a></li>
-                <li><a href="/about" className="text-gray-400 hover:text-white">About Us</a></li>
-                <li><a href="/services" className="text-gray-400 hover:text-white">Services</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-white">Contact</a></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
+                <li><Link href="/mens" className="text-gray-400 hover:text-white">Mens Collection</Link></li>
+                <li><Link href="/womens" className="text-gray-400 hover:text-white">Womens Collection</Link></li>
+                <li><Link href="/kids" className="text-gray-400 hover:text-white">Kids Collection</Link></li>
               </ul>
             </div>
   
@@ -29,9 +29,9 @@ const Footer = () => {
             <div>
               <h2 className="text-xl font-semibold mb-4">Contact</h2>
               <ul className="text-sm space-y-2">
-                <li className="text-gray-400">Email: info@example.com</li>
-                <li className="text-gray-400">Phone: +123 456 7890</li>
-                <li className="text-gray-400">Address: 123 Main Street, City</li>
+                <li className="text-gray-400">Email: arifahmmadsumon@gmail.com</li>
+                <li className="text-gray-400">Phone: +8801751260010</li>
+                <li className="text-gray-400">Address:Parbatipur, Dinajpur</li>
               </ul>
             </div>
   
@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
   
           <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-500 text-sm">
-            © 2024 Your Company. All rights reserved.
+            © 2024 sumon. All rights reserved.
           </div>
         </div>
       </footer>

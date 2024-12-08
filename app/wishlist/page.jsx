@@ -16,7 +16,7 @@ const Wishlist = () => {
           Wishlist
         </h2>
         <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
-          <div className="lg:w-3/4">
+          <div className="lg:w-3/4 min-h-[50vh]">
             {wishlistItems.length === 0 ? (
               <p>Your wishlist is empty</p>
             ) : (

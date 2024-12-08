@@ -3,6 +3,7 @@ import React, { useMemo } from 'react';
 import Image from 'next/image';
 import useCartStore from '../../store/useStore';  // Ensure the correct path
 import { allProducts } from '../../data';  // Assuming allProducts contains all your product data
+import Link from 'next/link';
 
 const Cart = () => {
   const items = useCartStore((state) => state.items);
@@ -24,7 +25,7 @@ const Cart = () => {
           Shopping Cart
         </h2>
         <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
-          <div className="lg:w-3/4">
+          <div className="lg:w-3/4 min-h-[50vh]">
             {items.length === 0 ? (
               <p>Your cart is empty</p>
             ) : (
@@ -144,12 +145,23 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
+              <Link href="/checkout">
               <button
                 type="button"
                 className="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
               >
                 Checkout
               </button>
+              </Link>
+              <p className='text-center'>oR</p>
+              <Link href="/">
+              <button
+                type="button"
+                className="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+              >
+                Continue Shopping
+              </button>
+              </Link>
             </div>
           </div>
         </div>
