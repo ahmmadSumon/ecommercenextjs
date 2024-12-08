@@ -254,13 +254,13 @@ const Nav = () => {
                     How to Order
                   </Button>
                   <div className="space-y-2 pl-4">
-                    <Link href="/order/process" className="block text-white hover:text-gray-600">
+                    <Link href="/order" className="block text-white hover:text-gray-600">
                       Ordering Process
                     </Link>
-                    <Link href="/order/shipping" className="block text-white hover:text-gray-600">
+                    <Link href="/order" className="block text-white hover:text-gray-600">
                       Shipping Info
                     </Link>
-                    <Link href="/order/returns" className="block text-white hover:text-gray-600">
+                    <Link href="/order" className="block text-white hover:text-gray-600">
                       Returns & Refunds
                     </Link>
                   </div>
