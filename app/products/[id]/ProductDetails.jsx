@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import useCartStore from "../../../store/useStore"; // Ensure the correct path to your Zustand store
 import { useToast } from "@/hooks/use-toast"; // Import useToast
+import { useRouter } from "next/navigation"; // Import useRouter for navigation
 
 const ProductDetail = ({ product }) => {
   const { addItem, addToWishlist } = useCartStore(); // Zustand store hooks
   const { toast } = useToast(); // Toast hook
+  const router = useRouter(); // Initialize the router for navigation
 
   const addToCart = (product) => {
     addItem(product); // Add the product to the cart
@@ -23,6 +25,15 @@ const ProductDetail = ({ product }) => {
       title: "Item Added to Wishlist",
       description: `${product.name} has been added to your wishlist.`,
     });
+  };
+
+  const handleBuyNow = (product) => {
+    addItem(product); // Add the product to the cart
+    toast({
+      title: "Item Added to Cart",
+      description: `${product.name} has been added to your cart. Redirecting to cart.`,
+    });
+    router.push("/cart"); // Navigate to the cart page
   };
 
   return (
@@ -71,6 +82,7 @@ const ProductDetail = ({ product }) => {
             </button>
             <button
               className="px-4 py-2 bg-black text-white rounded-lg hover:bg-green-700 transition"
+              onClick={() => handleBuyNow(product)} // Buy now handler (add to cart and navigate)
             >
               Buy Now
             </button>
