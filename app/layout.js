@@ -3,6 +3,8 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +27,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Nav />
+        <StairTransition/>
+        <PageTransition>
         {children}
+        </PageTransition>
         <Footer />
         {/* The Toaster component is placed here, which will show the toast notifications */}
         <Toaster />

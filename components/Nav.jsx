@@ -230,7 +230,7 @@ const Nav = () => {
                 <Link href="/" className="block text-white hover:text-gray-600">
                   HOME
                 </Link>
-                <Link href="/winter" className="block text-white hover:text-gray-600">
+                <Link href="/allproducts" className="block text-white hover:text-gray-600">
                   WINTER 24/25
                 </Link>
                 <div>

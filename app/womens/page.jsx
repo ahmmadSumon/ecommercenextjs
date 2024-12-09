@@ -19,7 +19,7 @@ const Womens= ()=> {
     }
 
   return (
-    <div className="max-w-7xl mx-auto mt-20">
+    <div className="max-w-7xl mx-auto mt-28">
       <h1 className="text-center text-3xl text-white font-bold">Womens Collection</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-6">
         {womenClothingItems.map((product) => (
