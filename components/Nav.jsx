@@ -73,7 +73,7 @@ const Nav = () => {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/mens" className="font-bold text-gray-800 hover:text-gray-600">
+              <Link href="/allproducts" className="font-bold text-gray-800 hover:text-gray-600">
                 WINTER 24/25
               </Link>
             </NavigationMenuItem>
