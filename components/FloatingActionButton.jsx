@@ -8,7 +8,7 @@ const FloatingCartButton = () => {
   const items = useCartStore((state) => state.items);
 
   return (
-    <div className="fixed top-[40%] right-1 z-50">
+    <div className="fixed top-[40%] right-2 z-50">
       <div className="relative">
         {/* Cart Icon Button */}
         <Link href="/cart">
