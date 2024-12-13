@@ -204,14 +204,6 @@ const Nav = () => {
               </SheetContent>
             </Sheet>
           </div>
-          <div className="relative mx-1">
-          <Link href="/cart">
-            <FiShoppingCart size={24} className="cursor-pointer" />
-            <span className="w-5 h-5 bg-black text-white rounded-full absolute left-3 -top-5 text-xs flex items-center justify-center font-semibold ring-2 ring-white ring-offset-2 transform scale-110 hover:scale-125 transition-all duration-300 ease-in-out">
-              {items.length}
-            </span>
-            </Link>
-          </div>
           <div className=" relative mx-1">
           <Link href="/wishlist">
             <FiHeart size={24} className="cursor-pointer" />
@@ -220,6 +212,15 @@ const Nav = () => {
             </span>
             </Link>
           </div>
+          <div className="relative mx-1">
+          <Link href="/cart">
+            <FiShoppingCart size={24} className="cursor-pointer" />
+            <span className="w-5 h-5 bg-black text-white rounded-full absolute left-3 -top-5 text-xs flex items-center justify-center font-semibold ring-2 ring-white ring-offset-2 transform scale-110 hover:scale-125 transition-all duration-300 ease-in-out">
+              {items.length}
+            </span>
+            </Link>
+          </div>
+         
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger>
               <FiMenu size={30} className="cursor-pointer bg-white mx-2 " />
