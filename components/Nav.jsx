@@ -59,7 +59,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`bg-white shadow-md px-6 py-6 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-white shadow-md md:px-6 px-2 py-6 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -146,7 +146,7 @@ const Nav = () => {
 
         {/* Middle Section */}
         <div className="flex-1 flex justify-center">
-          <Link href="/" className="text-xl font-extrabold text-gray-800 hover:text-gray-600">
+          <Link href="/" className="md:text-xl text-lg font-extrabold text-gray-800 hover:text-gray-600">
             betichrom fashion
           </Link>
         </div>
@@ -194,7 +194,17 @@ const Nav = () => {
 
         {/* Mobile Menu: Side Open Menu with Sheet Component */}
         <div className="md:hidden flex items-center">
-          <div className="relative mx-2">
+        <div className="relative">
+            <Sheet>
+              <SheetTrigger>
+                <FiSearch size={24} className="cursor-pointer" />
+              </SheetTrigger>
+              <SheetContent side="top" className="p-4 bg-white shadow-lg">
+                <SearchComponent />
+              </SheetContent>
+            </Sheet>
+          </div>
+          <div className="relative mx-1">
           <Link href="/cart">
             <FiShoppingCart size={24} className="cursor-pointer" />
             <span className="w-5 h-5 bg-black text-white rounded-full absolute left-3 -top-5 text-xs flex items-center justify-center font-semibold ring-2 ring-white ring-offset-2 transform scale-110 hover:scale-125 transition-all duration-300 ease-in-out">
@@ -202,7 +212,7 @@ const Nav = () => {
             </span>
             </Link>
           </div>
-          <div className=" relative mx-2">
+          <div className=" relative mx-1">
           <Link href="/wishlist">
             <FiHeart size={24} className="cursor-pointer" />
             <span className="w-5 h-5 bg-black text-white rounded-full absolute left-3 -top-5 text-xs flex items-center justify-center font-semibold ring-2 ring-white ring-offset-2 transform scale-110 hover:scale-125 transition-all duration-300 ease-in-out">

@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import FloatingCartButton from "@/components/FloatingActionButton";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,6 +32,8 @@ export default function RootLayout({ children }) {
         <StairTransition/>
         <PageTransition>
         {children}
+        <FloatingCartButton/>
+        <ScrollToTopButton/>
         </PageTransition>
         <Footer />
         {/* The Toaster component is placed here, which will show the toast notifications */}
