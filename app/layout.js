@@ -7,6 +7,8 @@ import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import FloatingCartButton from "@/components/FloatingActionButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ThemeProvider from "@/utils/ThemeProvider";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +33,14 @@ export default function RootLayout({ children }) {
         <Nav />
         <StairTransition/>
         <PageTransition>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          <ThemeSwitcher />
+          <main>{children}</main>
+        </ThemeProvider>
         <FloatingCartButton/>
         <ScrollToTopButton/>
         </PageTransition>

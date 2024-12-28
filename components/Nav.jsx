@@ -23,6 +23,7 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import SearchComponent from "./Search";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -178,6 +179,7 @@ const Nav = () => {
 </div>
 
           <div variant="ghost">
+           
             <FiUser className="cursor-pointer" size={24} />
           </div>
           <Link href="/allproducts">
