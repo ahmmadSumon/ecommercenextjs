@@ -201,7 +201,7 @@ const Nav = () => {
               <SheetTrigger>
                 <FiSearch size={24} className="cursor-pointer" />
               </SheetTrigger>
-              <SheetContent side="top" className="p-4 bg-white shadow-lg">
+              <SheetContent side="top" className="p-4 bg-white  shadow-lg">
                 <SearchComponent />
               </SheetContent>
             </Sheet>
@@ -225,7 +225,7 @@ const Nav = () => {
          
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger>
-              <FiMenu size={30} className="cursor-pointer bg-white mx-2 " />
+              <FiMenu size={30} className="cursor-pointer bg-white dark:text-black mx-2 " />
             </SheetTrigger>
 
             <SheetContent side="left" className="w-64 bg-black p-6 shadow-lg space-y-4">
