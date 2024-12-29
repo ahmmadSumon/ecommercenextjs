@@ -60,7 +60,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`bg-white shadow-md md:px-6 px-2 py-6 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-white dark:bg-black dark:text-white shadow-md md:px-6 px-2 py-6 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -69,40 +69,40 @@ const Nav = () => {
         <NavigationMenu>
           <NavigationMenuList className="hidden md:flex space-x-10">
             <NavigationMenuItem>
-              <Link href="/" className="font-bold text-gray-800 hover:text-gray-600">
+              <Link href="/" className="font-bold text-gray-800 dark:text-white hover:text-gray-600">
                 HOME
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/allproducts" className="font-bold text-gray-800 hover:text-gray-600">
+              <Link href="/allproducts" className="font-bold dark:text-white text-gray-800 hover:text-gray-600">
                 WINTER 24/25
               </Link>
             </NavigationMenuItem>
 
             {/* Shop Dropdown */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-bold text-gray-800 hover:text-gray-600">
+              <NavigationMenuTrigger className="font-bold dark:text-white text-gray-800 hover:text-gray-600">
                 SHOP
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-4 bg-white shadow-lg rounded-lg mt-2">
                 <ul className="space-y-2">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/mens" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/mens" className="text-gray-800  hover:text-gray-600">
                         Men&apos;s Fashion
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/womens" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/womens" className="text-gray-800  hover:text-gray-600">
                         Women&apos;s Fashion
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/kids" className="text-gray-800 hover:text-gray-600">
+                      <Link href="/kids" className="text-gray-800  hover:text-gray-600">
                         Kids&apos; Fashion
                       </Link>
                     </NavigationMenuLink>
@@ -113,7 +113,7 @@ const Nav = () => {
 
             {/* How to Order Dropdown */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-bold text-gray-800 hover:text-gray-600">
+              <NavigationMenuTrigger className="font-bold text-gray-800 dark:text-white hover:text-gray-600">
                 How to Order
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-4 bg-white shadow-lg rounded-lg mt-2">
@@ -147,7 +147,7 @@ const Nav = () => {
 
         {/* Middle Section */}
         <div className="flex-1 flex justify-center">
-          <Link href="/" className="md:text-xl text-lg font-extrabold text-gray-800 hover:text-gray-600">
+          <Link href="/" className="md:text-xl text-lg font-extrabold dark:text-white text-gray-800 hover:text-gray-600">
             betichrom fashion
           </Link>
         </div>
@@ -183,7 +183,7 @@ const Nav = () => {
             <FiUser className="cursor-pointer" size={24} />
           </div>
           <Link href="/allproducts">
-          <button className="relative rounded px-6 py-3 bg-black text-white text-sm font-medium tracking-wide overflow-hidden group">
+          <button className="relative rounded px-6 py-3 bg-black dark:bg-white dark:text-black  text-white text-sm font-medium tracking-wide overflow-hidden group">
             <span className="relative z-10 block transition-transform duration-300 group-hover:-translate-y-8">
               Shop Now
             </span>

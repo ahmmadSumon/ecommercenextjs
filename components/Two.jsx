@@ -19,7 +19,7 @@ const Two = () => {
   ];
 
   return (
-    <div className="py-8 px-4 bg-gray-50 ">
+    <div className="py-8 px-4 bg-gray-50 dark:bg-black  ">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-7xl mx-auto">
         {items.map((item) => (
          

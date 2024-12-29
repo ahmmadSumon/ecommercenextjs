@@ -13,11 +13,11 @@ const ThemeSwitcher = () => {
   if (!isMounted) return null; // Return nothing on server-side render
   console.log(currentTheme);
   return mount ? (
-    <div className="fixed  top-[30%] right-3 z-[10000000000]  max-lg:bottom-2.5  lg:top-6">
+    <div className="fixed  top-[30%] right-2 z-[10000000000]  max-lg:bottom-2.5  lg:top-6">
       <button
         onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
         type="button"
-        className="flex h-10 w-10 p-2 items-center justify-center bg-black text-white rounded-md border border-gray-800 focus:outline-none focus:ring-0 focus:ring-gray-200 dark:border-slate-300 dark:text-white"
+        className="flex h-10 w-10 p-2 items-center justify-center bg-black text-white rounded-full border border-gray-800 focus:outline-none focus:ring-0 focus:ring-gray-200 dark:border-slate-300 dark:text-white"
       >
         <svg
           className="dark:hidden"

@@ -42,7 +42,7 @@ const SearchComponent = () => {
     <div className="relative w-full max-w-xs" ref={searchRef}>
       <input
         type="text"
-        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+        className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-black"
         placeholder="Search products..."
         value={query}
         onChange={(e) => {

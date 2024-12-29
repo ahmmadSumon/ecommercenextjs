@@ -52,7 +52,7 @@ const ProductDetail = ({ product }) => {
 
         {/* Product Details */}
         <div className="lg:w-1/2 pt-7 md:pt-40 px-5 bg-[#EBF5FB]">
-          <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
+          <h1 className="text-3xl dark:text-black  font-bold mb-4">{product.name}</h1>
           <p className="text-gray-700 mb-4">{product.description}</p>
           <p className="text-lg font-bold text-gray-900 mb-4">
             Price: ${product.price.toFixed(2)}
@@ -61,7 +61,7 @@ const ProductDetail = ({ product }) => {
           {/* Size Selection (if applicable) */}
           {product.sizes?.length > 0 && (
             <div className="mb-4">
-              <h3 className="text-sm font-semibold mb-2">Select Size:</h3>
+              <h3 className="text-sm font-semibold dark:text-black mb-2">Select Size:</h3>
               <select className="border border-gray-300 rounded-lg px-3 py-2 w-full">
                 {product.sizes.map((size) => (
                   <option key={size} value={size}>

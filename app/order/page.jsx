@@ -12,7 +12,7 @@ const OrderDetails = () => {
 
   return (
     <div className="min-h-[50vh]">
-    <div className="max-w-5xl mx-auto p-6 bg-white rounded-lg shadow-lg space-y-6 mt-28 my-10 ">
+    <div className="max-w-5xl mx-auto p-6 bg-white dark:text-black rounded-lg shadow-lg space-y-6 mt-28 my-10 ">
       <h1 className="text-3xl font-bold text-center mb-6">Order Information</h1>
 
       {/* Ordering Process */}

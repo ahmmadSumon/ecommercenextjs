@@ -45,7 +45,7 @@ export default function Category() {
         
             <div
               key={category.id}
-              className="relative group bg-gray-200 rounded-lg shadow-md overflow-hidden   transition-all duration-300 hover:bg-black  cursor-pointer  hover:text-white"
+              className="relative group bg-gray-200 dark:text-black  rounded-lg shadow-md overflow-hidden   transition-all duration-300 hover:bg-black  cursor-pointer  hover:text-white"
             >
            
               <div className="p-6 text-center">
