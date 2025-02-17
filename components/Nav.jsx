@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import SearchComponent from "./Search";
 import ThemeSwitcher from "./ThemeSwitcher";
+import Image from "next/image";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -147,10 +148,16 @@ const Nav = () => {
 
         {/* Middle Section */}
         <div className="flex-1 flex justify-center">
-          <Link href="/" className="md:text-xl text-lg font-extrabold dark:text-white text-gray-800 hover:text-gray-600">
-            betichrom fashion
-          </Link>
-        </div>
+  <Link href="/" className="rounded-full overflow-hidden">
+    <Image 
+      src="/retro.png" 
+      alt="logo" 
+      width={150} 
+      height={150} 
+      className="w-[100px] h-[50px] sm:w-[100px]" 
+    />
+  </Link>
+</div>
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-4">
